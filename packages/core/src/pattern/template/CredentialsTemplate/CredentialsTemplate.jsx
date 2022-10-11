@@ -50,7 +50,6 @@ export function CredentialsTemplate() {
     alertTextCredentials,
     navigatorHeading,
     instance,
-    contextAuthorization,
     navigation,
     currentPage,
     sort,
@@ -85,14 +84,6 @@ export function CredentialsTemplate() {
     credentialsObjectsKeysFlexGridOnClick,
     credentialsNavigationTabNavOnClick,
   } = useCredentialsState()
-
-  if (contextAuthorization.isRequired && !contextAuthorization.token) {
-    return (
-      <Alert dataTest={{ default: dataTestCredentials.alert.div.default }} className={alert} variant={alertVariant.error}>
-        {alertTextCredentials.authorize.notAuthorized}
-      </Alert>
-    )
-  }
 
   return (
     <div className={container}>

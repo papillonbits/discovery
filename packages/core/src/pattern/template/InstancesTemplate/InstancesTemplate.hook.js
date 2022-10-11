@@ -19,7 +19,6 @@ export function useInstancesState() {
 
   const navigatorHeading = pageContent.instances.subheadHeading
   const instance = useSelector(({ context }) => context.instance)
-  const contextAuthorization = useSelector(({ context }) => context.authorization)
   const selectedInstance = useSelector(({ context }) => context.instance.items.find((instanceItem) => instanceItem.isSelected === true))
   const {
     instancesObjects,
@@ -148,7 +147,6 @@ export function useInstancesState() {
     dataTestInstances,
     alertTextInstances,
     navigatorHeading,
-    contextAuthorization,
     currentPage,
     sort,
     edit,

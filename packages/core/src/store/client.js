@@ -4,7 +4,7 @@ import { state } from '../state'
 import { Store } from './base'
 import { getAppReducer } from './reducer'
 import { setAppCompleteStateThunk } from './thunk/app/completeState'
-import { continuePagePath } from '../route/path'
+import { appRootPath, startPagePath } from '../route/path'
 import { isRunningOnLocalHost } from '../library/environment/host'
 
 export class AppStore extends Store {
@@ -26,7 +26,10 @@ export class AppStore extends Store {
       ...this.appState.context.navigation,
       items: this.appState.context.navigation.items.map((navigationItem) => ({
         ...navigationItem,
-        isSelected: navigationItem.link.props.to === continuePagePath,
+        isSelected:
+          window.location.pathname === appRootPath
+            ? navigationItem.link.props.to === startPagePath
+            : navigationItem.link.props.to === window.location.pathname,
       })),
     }
   }

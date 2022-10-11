@@ -53,7 +53,6 @@ export function PipelinesTemplate() {
     alertTextPipelines,
     navigatorHeading,
     instance,
-    contextAuthorization,
     navigation,
     currentPage,
     search,
@@ -118,14 +117,6 @@ export function PipelinesTemplate() {
     pipelinesObjectsExecutionsFlexGridOnClick,
     pipelinesNavigationTabNavOnClick,
   } = usePipelinesState()
-
-  if (contextAuthorization.isRequired && !contextAuthorization.token) {
-    return (
-      <Alert dataTest={{ default: dataTestPipelines.alert.div.default }} className={alert} variant={alertVariant.error}>
-        {alertTextPipelines.authorize.notAuthorized}
-      </Alert>
-    )
-  }
 
   return (
     <div className={container}>

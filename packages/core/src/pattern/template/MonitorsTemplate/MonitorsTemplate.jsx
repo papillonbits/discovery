@@ -6,20 +6,12 @@ import styles from './MonitorsTemplate.scss'
 
 export function MonitorsTemplate() {
   const {
-    Alert: { Alert, alertVariant },
+    Alert: { Alert },
   } = primer
 
   const { container, alert, content } = styles
 
-  const { dataTestMonitors, alertTextMonitors, navigatorHeading, instance, contextAuthorization, state } = useMonitorsState()
-
-  if (contextAuthorization.isRequired && !contextAuthorization.token) {
-    return (
-      <Alert dataTest={{ default: dataTestMonitors.alert.div.default }} className={alert} variant={alertVariant.error}>
-        {alertTextMonitors.authorize.notAuthorized}
-      </Alert>
-    )
-  }
+  const { dataTestMonitors, navigatorHeading, instance, state } = useMonitorsState()
 
   return (
     <div className={container}>

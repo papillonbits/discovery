@@ -62,7 +62,6 @@ export function usePipelinesState() {
 
   const navigatorHeading = pageContent.pipelines.subheadHeading
   const instance = useSelector(({ context }) => context.instance)
-  const contextAuthorization = useSelector(({ context }) => context.authorization)
   const selectedInstance = useSelector(({ context }) => context.instance.items.find((instanceItem) => instanceItem.isSelected === true))
   const {
     // pipelinesTemplates,
@@ -976,7 +975,6 @@ export function usePipelinesState() {
     alertTextPipelines,
     navigatorHeading,
     instance,
-    contextAuthorization,
     navigation,
     currentPage,
     search,

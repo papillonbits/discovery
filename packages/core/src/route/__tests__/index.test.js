@@ -1,10 +1,4 @@
 /* eslint-disable import/no-dynamic-require, global-require */
-const mockRequireAuthorizationPage = () => {
-  const authorizationPagePath = '../../pattern/page/AuthorizationPage'
-  jest.mock(authorizationPagePath, () => 'AuthorizationPage')
-  return require(authorizationPagePath)
-}
-
 const mockRequireDashboardPage = () => {
   const dashboardPagePath = '../../pattern/page/DashboardPage'
   jest.mock(dashboardPagePath, () => 'DashboardPage')
@@ -51,7 +45,6 @@ const mockRequirePath = () => {
   const pathPath = '../path'
   jest.mock(pathPath, () => ({
     appRootPath: 'fantastic-app-root-path',
-    authorizationPagePath: 'fantastic-authorization-page-path',
     dashboardPagePath: 'fantastic-dashboard-page-path',
     instancesPagePath: 'fantastic-instances-page-path',
     filesPagePath: 'fantastic-files-page-path',
@@ -76,21 +69,6 @@ describe('index', () => {
     test('must return app root route object', () => {
       const { appRootRoute } = requireIndex()
       expect(appRootRoute).toEqual(expectedAppRootRoute)
-    })
-  })
-
-  describe('authorizationPageRoute', () => {
-    const authorizationPage = mockRequireAuthorizationPage()
-
-    const expectedAuthorizationPageRoute = {
-      path: path.authorizationPagePath,
-      clientComponent: authorizationPage.AsyncAuthorizationPage,
-      serverComponent: authorizationPage.AuthorizationPage,
-    }
-
-    test('must return authorization page route object', () => {
-      const { authorizationPageRoute } = requireIndex()
-      expect(authorizationPageRoute).toEqual(expectedAuthorizationPageRoute)
     })
   })
 

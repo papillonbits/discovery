@@ -6,7 +6,6 @@ import { alertTextDashboard } from '../../../library/constant/alertText/dashboar
 export function useDashboardState() {
   const navigatorHeading = pageContent.dashboard.subheadHeading
   const instance = useSelector(({ context }) => context.instance)
-  const contextAuthorization = useSelector(({ context }) => context.authorization)
   const state = useSelector(({ ui }) => ui.state)
 
   return {
@@ -14,7 +13,6 @@ export function useDashboardState() {
     alertTextDashboard,
     navigatorHeading,
     instance,
-    contextAuthorization,
     state,
   }
 }

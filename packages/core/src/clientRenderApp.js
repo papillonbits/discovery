@@ -8,7 +8,6 @@ import { checkAccessibilityIssues } from '@papillonbits/library/a11y'
 import { startPagePath } from './route/path'
 import {
   appRootRoute,
-  authorizationPageRoute,
   dashboardPageRoute,
   instancesPageRoute,
   filesPageRoute,
@@ -29,7 +28,6 @@ export function App() {
         <BrowserRouter>
           <Routes>
             <Route path={appRootRoute.path} element={<Navigate to={startPagePath} />} />
-            <Route path={authorizationPageRoute.path} element={authorizationPageRoute.clientComponent()} />
             <Route path={dashboardPageRoute.path} element={dashboardPageRoute.clientComponent()} />
             <Route path={instancesPageRoute.path} element={instancesPageRoute.clientComponent()} />
             <Route path={filesPageRoute.path} element={filesPageRoute.clientComponent()} />

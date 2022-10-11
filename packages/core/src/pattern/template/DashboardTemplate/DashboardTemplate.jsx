@@ -6,20 +6,12 @@ import styles from './DashboardTemplate.scss'
 
 export function DashboardTemplate() {
   const {
-    Alert: { Alert, alertVariant },
+    Alert: { Alert },
   } = primer
 
   const { container, alert, content } = styles
 
-  const { dataTestDashboard, alertTextDashboard, navigatorHeading, instance, contextAuthorization, state } = useDashboardState()
-
-  if (contextAuthorization.isRequired && !contextAuthorization.token) {
-    return (
-      <Alert dataTest={{ default: dataTestDashboard.alert.div.default }} className={alert} variant={alertVariant.error}>
-        {alertTextDashboard.authorize.notAuthorized}
-      </Alert>
-    )
-  }
+  const { dataTestDashboard, navigatorHeading, instance, state } = useDashboardState()
 
   return (
     <div className={container}>

@@ -1,5 +1,4 @@
 export const alertTextInstances = Object.freeze({
-  authorize: { notAuthorized: 'You are not authorized to proceed to instances!' },
   pagination: { browsing: 'Browsing through pages...' },
   action: {
     create: {

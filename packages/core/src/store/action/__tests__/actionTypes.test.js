@@ -2,7 +2,6 @@ import * as types from '../actionTypes'
 
 describe('actionTypes', () => {
   test('must return all action types', () => {
-    expect(types).toHaveProperty('CONTEXT_SET_AUTHORIZATION')
     expect(types).toHaveProperty('CONTEXT_SET_INSTANCE')
     expect(types).toHaveProperty('CONTEXT_SET_NAVIGATION')
     expect(types).toHaveProperty('UI_SET_INSTANCES')

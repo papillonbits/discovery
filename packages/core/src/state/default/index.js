@@ -1,4 +1,4 @@
-import { authorization, instance, navigation } from './context'
+import { instance, navigation } from './context'
 import { messageType } from '../../library/constant'
 import { isRunningOnLocalHost } from '../../library/environment/host'
 import { getNewInstances } from '../../store/reducer/ui/instances/random/instances'
@@ -6,7 +6,6 @@ import { getNewInstances } from '../../store/reducer/ui/instances/random/instanc
 export const appState = {
   context: {
     isRunningOnLocalHost,
-    authorization,
     instance,
     navigation,
   },

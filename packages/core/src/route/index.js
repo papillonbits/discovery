@@ -1,4 +1,3 @@
-import { AsyncAuthorizationPage, AuthorizationPage } from '../pattern/page/AuthorizationPage'
 import { AsyncDashboardPage, DashboardPage } from '../pattern/page/DashboardPage'
 import { AsyncInstancesPage, InstancesPage } from '../pattern/page/InstancesPage'
 import { AsyncFilesPage, FilesPage } from '../pattern/page/FilesPage'
@@ -8,7 +7,6 @@ import { AsyncMonitorsPage, MonitorsPage } from '../pattern/page/MonitorsPage'
 import { AsyncNotFoundPage, NotFoundPage } from '../pattern/page/NotFoundPage'
 import {
   appRootPath,
-  authorizationPagePath,
   dashboardPagePath,
   instancesPagePath,
   filesPagePath,
@@ -19,12 +17,6 @@ import {
 
 export const appRootRoute = {
   path: appRootPath,
-}
-
-export const authorizationPageRoute = {
-  path: authorizationPagePath,
-  clientComponent: AsyncAuthorizationPage,
-  serverComponent: AuthorizationPage,
 }
 
 export const dashboardPageRoute = {

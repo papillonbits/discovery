@@ -1,11 +1,10 @@
-import { authorization, instance, navigation } from './context'
+import { instance, navigation } from './context'
 import { messageType } from '../../library/constant'
 import { files } from './ui'
 
 export const appState = {
   context: {
     isRunningOnLocalHost: true,
-    authorization,
     instance,
     navigation,
   },

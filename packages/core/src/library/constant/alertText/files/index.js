@@ -1,5 +1,4 @@
 export const alertTextFiles = Object.freeze({
-  authorize: { notAuthorized: 'You are not authorized to proceed to files!' },
   pagination: { browsing: 'Browsing through pages...' },
   display: { browsing: 'Browsing through files and folders...' },
   location: { browsing: 'Browsing through location...' },

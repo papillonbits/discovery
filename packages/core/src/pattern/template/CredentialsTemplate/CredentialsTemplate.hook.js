@@ -49,7 +49,6 @@ export function useCredentialsState() {
 
   const navigatorHeading = pageContent.credentials.subheadHeading
   const instance = useSelector(({ context }) => context.instance)
-  const contextAuthorization = useSelector(({ context }) => context.authorization)
   const selectedInstance = useSelector(({ context }) => context.instance.items.find((instanceItem) => instanceItem.isSelected === true))
   const {
     credentialsObjects,
@@ -457,7 +456,6 @@ export function useCredentialsState() {
     alertTextCredentials,
     navigatorHeading,
     instance,
-    contextAuthorization,
     navigation,
     currentPage,
     sort,

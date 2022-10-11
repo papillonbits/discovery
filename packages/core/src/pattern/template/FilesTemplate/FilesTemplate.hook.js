@@ -60,7 +60,6 @@ export function useFilesState() {
   }
 
   const navigatorHeading = pageContent.files.subheadHeading
-  const contextAuthorization = useSelector(({ context }) => context.authorization)
   const selectedInstanceId = useSelector(
     ({ context }) => context.instance.items.find((instanceItem) => instanceItem.isSelected === true)?.id,
   )
@@ -343,7 +342,6 @@ export function useFilesState() {
     navigatorHeading,
     selectedInstanceId,
     selectedInstanceName,
-    contextAuthorization,
     location,
     filesObjects,
     currentPage,

@@ -1,5 +1,4 @@
 import {
-  contextSetAuthorizationAction,
   contextSetInstanceAction,
   contextSetNavigationAction,
   uiSetInstancesAction,
@@ -70,12 +69,6 @@ describe('actionCreators', () => {
   const payload = { somePayload: 'fantastic-payload' }
 
   describe('context', () => {
-    describe('contextSetAuthorizationAction()', () => {
-      test('must return action with given payload', () => {
-        expect(contextSetAuthorizationAction(payload)).toMatchObject({ type: 'CONTEXT_SET_AUTHORIZATION', payload })
-      })
-    })
-
     describe('contextSetInstanceAction()', () => {
       test('must return action with given payload', () => {
         expect(contextSetInstanceAction(payload)).toMatchObject({ type: 'CONTEXT_SET_INSTANCE', payload })

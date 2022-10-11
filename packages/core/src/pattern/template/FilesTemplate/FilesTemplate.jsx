@@ -6,7 +6,7 @@ import styles from './FilesTemplate.scss'
 
 export function FilesTemplate() {
   const {
-    Alert: { Alert, alertVariant },
+    Alert: { Alert },
     Breadcrumb: { Breadcrumb, breadcrumbState },
     Button: { Button, buttonVariant, iconAlignment, buttonInputType, buttonState },
     Form: {
@@ -36,9 +36,7 @@ export function FilesTemplate() {
 
   const {
     dataTestFiles,
-    alertTextFiles,
     navigatorHeading,
-    contextAuthorization,
     location,
     filesObjects,
     currentPage,
@@ -60,14 +58,6 @@ export function FilesTemplate() {
     flexGridOnDoubleClick,
     breadcrumbOnClick,
   } = useFilesState()
-
-  if (contextAuthorization.isRequired && !contextAuthorization.token) {
-    return (
-      <Alert dataTest={{ default: dataTestFiles.alert.div.default }} className={alert} variant={alertVariant.error}>
-        {alertTextFiles.authorize.notAuthorized}
-      </Alert>
-    )
-  }
 
   return (
     <div className={container}>

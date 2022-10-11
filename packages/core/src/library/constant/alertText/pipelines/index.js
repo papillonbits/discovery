@@ -1,5 +1,4 @@
 export const alertTextPipelines = Object.freeze({
-  authorize: { notAuthorized: 'You are not authorized to proceed to pipelines!' },
   object: {
     pagination: { browsing: 'Browsing through pages...' },
     action: {

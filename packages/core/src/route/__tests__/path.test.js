@@ -31,21 +31,6 @@ describe('path', () => {
     })
   })
 
-  describe('authorizationPagePath', () => {
-    test('must return path with base url when process.env.BASE_URL is present', () => {
-      jest.resetModules()
-      extendEnvironmentVariables()
-      const { authorizationPagePath } = requirePath()
-      expect(authorizationPagePath).toBe(`${process.env.BASE_URL}/authorization`)
-    })
-
-    test('must return path without base url when process.env.BASE_URL is absent', () => {
-      jest.resetModules()
-      const { dashboardPagePath } = requirePath()
-      expect(dashboardPagePath).toBe('/dashboard')
-    })
-  })
-
   describe('dashboardPagePath', () => {
     test('must return path with base url when process.env.BASE_URL is present', () => {
       jest.resetModules()

@@ -6,7 +6,6 @@ import { alertTextMonitors } from '../../../library/constant/alertText/monitors'
 export function useMonitorsState() {
   const navigatorHeading = pageContent.monitors.subheadHeading
   const instance = useSelector(({ context }) => context.instance)
-  const contextAuthorization = useSelector(({ context }) => context.authorization)
   const state = useSelector(({ ui }) => ui.state)
 
   return {
@@ -15,7 +14,6 @@ export function useMonitorsState() {
     navigatorHeading,
     pageContent,
     instance,
-    contextAuthorization,
     state,
   }
 }

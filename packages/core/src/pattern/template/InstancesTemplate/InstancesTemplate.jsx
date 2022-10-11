@@ -7,7 +7,7 @@ import styles from './InstancesTemplate.scss'
 
 export function InstancesTemplate() {
   const {
-    Alert: { Alert, alertVariant },
+    Alert: { Alert },
     Button: { Button, buttonVariant, iconAlignment, buttonState },
     Form: {
       Input: { Input, inputState },
@@ -36,9 +36,7 @@ export function InstancesTemplate() {
 
   const {
     dataTestInstances,
-    alertTextInstances,
     navigatorHeading,
-    contextAuthorization,
     currentPage,
     sort,
     edit,
@@ -51,14 +49,6 @@ export function InstancesTemplate() {
     instancesObjectsFlexGridOnChange,
     instancesObjectsFlexGridOnClick,
   } = useInstancesState()
-
-  if (contextAuthorization.isRequired && !contextAuthorization.token) {
-    return (
-      <Alert dataTest={{ default: dataTestInstances.alert.div.default }} className={alert} variant={alertVariant.error}>
-        {alertTextInstances.authorize.notAuthorized}
-      </Alert>
-    )
-  }
 
   return (
     <div className={container}>

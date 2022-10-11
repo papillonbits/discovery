@@ -1,5 +1,4 @@
 export const alertTextCredentials = Object.freeze({
-  authorize: { notAuthorized: 'You are not authorized to proceed to credentials!' },
   object: {
     pagination: { browsing: 'Browsing through pages...' },
     action: {

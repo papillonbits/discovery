@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux'
 import {
-  CONTEXT_SET_AUTHORIZATION,
   CONTEXT_SET_INSTANCE,
   CONTEXT_SET_NAVIGATION,
   UI_SET_INSTANCES,
@@ -66,7 +65,7 @@ import {
   UI_SET_PIPELINES_EDIT_EXECUTION,
   UI_SET_STATE,
 } from '../action/actionTypes'
-import { contextSetAuthorization, contextSetInstance, contextSetNavigation } from './context'
+import { contextSetInstance, contextSetNavigation } from './context'
 
 import { uiSetInstances } from './ui/instances/set/instances'
 import { uiCreateInstancesObjects } from './ui/instances/create/instancesObjects'
@@ -140,8 +139,6 @@ export const getAppReducer = () =>
     // eslint-disable-next-line default-param-last
     context: (state = {}, action) => {
       switch (action.type) {
-        case CONTEXT_SET_AUTHORIZATION:
-          return contextSetAuthorization(state, action)
         case CONTEXT_SET_INSTANCE:
           return contextSetInstance(state, action)
         case CONTEXT_SET_NAVIGATION:

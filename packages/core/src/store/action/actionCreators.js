@@ -1,5 +1,4 @@
 import {
-  CONTEXT_SET_AUTHORIZATION,
   CONTEXT_SET_INSTANCE,
   CONTEXT_SET_NAVIGATION,
   UI_SET_INSTANCES,
@@ -66,7 +65,6 @@ import {
   UI_SET_STATE,
 } from './actionTypes'
 
-export const contextSetAuthorizationAction = (payload) => ({ type: CONTEXT_SET_AUTHORIZATION, payload })
 export const contextSetInstanceAction = (payload) => ({ type: CONTEXT_SET_INSTANCE, payload })
 export const contextSetNavigationAction = (payload) => ({ type: CONTEXT_SET_NAVIGATION, payload })
 export const uiSetInstancesAction = (payload) => ({ type: UI_SET_INSTANCES, payload })
