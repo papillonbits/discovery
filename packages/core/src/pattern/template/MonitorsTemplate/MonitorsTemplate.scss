@@ -1,0 +1,13 @@
+@import '../../../index.scss';
+
+.container {
+  @include container;
+}
+
+.alert {
+  margin-bottom: -20px;
+}
+
+.content {
+  background-color: transparent;
+}
