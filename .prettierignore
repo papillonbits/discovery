@@ -1,0 +1,25 @@
+# MacOS
+.DS_Store
+
+# Sublime Text
+app.sublime-project
+app.sublime-workspace
+
+# Storybook
+.storybook-static
+
+# Discovery
+.coverage
+.husky
+node_modules
+.env
+.npmrc
+codecov
+lerna-debug.log
+npm-debug.log
+package-lock.json
+
+# Microsite Core
+packages/core/package-lock.json
+packages/core/build
+packages/core/node_modules
