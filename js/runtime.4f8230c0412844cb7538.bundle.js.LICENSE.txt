@@ -1,0 +1,6 @@
+/*!
+ * @project        @papillonbits/discovery-core-microsite
+ * @name           runtime.4f8230c0412844cb7538.bundle.js
+ * @author         MTS
+ * @copyright      Copyright (c) 2022 MTS
+ */
