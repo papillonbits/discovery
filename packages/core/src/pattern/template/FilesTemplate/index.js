@@ -1,0 +1,1 @@
+export { FilesTemplate } from './FilesTemplate'
