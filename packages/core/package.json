@@ -1,0 +1,32 @@
+{
+  "name": "@papillonbits/discovery-core-microsite",
+  "version": "1.0.0",
+  "description": "Discovery Core Microsite",
+  "homepage": "https://github.com/papillonbits/discovery/tree/master/packages/core",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/papillonbits/discovery.git",
+    "directory": "packages/core"
+  },
+  "files": [
+    "build",
+    "README.md"
+  ],
+  "keywords": [
+    "discovery core microsite"
+  ],
+  "author": {
+    "name": "MTS",
+    "url": "https://github.com/mts"
+  },
+  "scripts": {
+    "clean-up": "rm -rf build node_modules package-lock.json",
+    "install-packages": "npm install",
+    "install-papillonbits-latest": "echo \"core skipping install-papillonbits-latest\" && exit 0",
+    "make-404-page": "cp build/index.html build/404.html",
+    "build-test": "webpack --config webpack/webpack.test.babel.js --progress && npm run make-404-page",
+    "build-acceptance": "webpack --config webpack/webpack.acceptance.babel.js --progress && npm run make-404-page",
+    "build-release": "webpack --config webpack/webpack.release.babel.js --progress && npm run make-404-page",
+    "start": "nodemon --watch webpack/webpack.common.js --watch webpack/webpack.develop.babel.js --exec \"webpack serve --config webpack/webpack.develop.babel.js --progress\""
+  }
+}
