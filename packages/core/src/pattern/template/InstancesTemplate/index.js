@@ -1,0 +1,1 @@
+export { InstancesTemplate } from './InstancesTemplate'
