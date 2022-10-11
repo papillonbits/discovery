@@ -1,0 +1,190 @@
+@import '~@papillonbits/css/build/primer/support/mixins/layout.scss';
+@import '../../../index.scss';
+
+.container {
+  @include container;
+}
+
+.alert {
+  margin-bottom: -20px;
+}
+
+.content {
+  &Display {
+    display: flex;
+    flex-direction: column;
+
+    &Navigation {
+      border-style: none;
+      margin-top: 25px;
+
+      @include breakpoint(md) {
+        margin-top: 0;
+      }
+
+      &Container {
+        margin-top: 15px;
+
+        @include breakpoint(md) {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &Grid {
+      &Pipelines {
+        margin: 20px 0;
+        min-width: 768px;
+      }
+
+      &Steps {
+        margin-top: 25px;
+        min-width: 544px;
+      }
+
+      &Mappings {
+        margin-top: 25px;
+        min-width: 544px;
+      }
+
+      &Executions {
+        margin-top: 25px;
+        min-width: 544px;
+      }
+    }
+
+    &Search {
+      display: flex;
+      flex-direction: column;
+
+      @include breakpoint(md) {
+        flex-direction: row;
+      }
+
+      &Part {
+        width: 100%;
+
+        &Field {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          margin-top: 15px;
+          margin-bottom: 15px;
+
+          @include breakpoint(md) {
+            margin-top: 15px;
+            margin-bottom: 15px;
+          }
+
+          &Dropdown {
+            details {
+              width: 100%;
+
+              @include breakpoint(md) {
+                width: 95%;
+              }
+            }
+
+            summary {
+              width: 100%;
+
+              @include breakpoint(md) {
+                width: 95%;
+              }
+            }
+          }
+
+          &Input {
+            width: 100%;
+          }
+
+          &Label {
+            margin-top: 2px;
+            padding: 5px;
+            border-radius: 6px;
+          }
+        }
+      }
+    }
+
+    &Pagination {
+      display: flex;
+      justify-content: flex-start;
+      margin: 0;
+
+      @include breakpoint(md) {
+        justify-content: flex-end;
+      }
+    }
+
+    &Edit {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 10px;
+
+      @include breakpoint(md) {
+        flex-direction: row;
+      }
+
+      &Field {
+        display: flex;
+        margin-top: 5px;
+
+        &Label {
+          margin-right: 5px;
+          padding: 5px;
+          border-radius: 6px;
+          min-width: 300px;
+        }
+
+        &Dropdown {
+          summary {
+            width: 300px;
+          }
+        }
+
+        &Input {
+          width: 300px;
+        }
+
+        &Checkbox {
+          input[type='checkbox'] {
+            margin: 10px 0 0 -20px;
+          }
+        }
+      }
+    }
+
+    &Action {
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-between;
+
+      &Group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @include breakpoint(md) {
+          flex-direction: row;
+          align-items: space-between;
+        }
+
+        &Button {
+          width: 100%;
+          margin: 0 0 1em;
+          min-width: 300px;
+
+          @include breakpoint(md) {
+            margin: 0 1em 1em 0;
+
+            &:last-child {
+              margin: 0 0 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
