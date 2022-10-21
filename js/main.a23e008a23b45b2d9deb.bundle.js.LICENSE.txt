@@ -5,7 +5,7 @@
 */
 
 /*!
- * @project        @papillonbits/discovery-core-microsite
+ * @project        discovery
  * @name           main.a23e008a23b45b2d9deb.bundle.js
  * @author         MTS
  * @copyright      Copyright (c) 2022 MTS
