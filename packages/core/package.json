@@ -1,8 +1,7 @@
 {
   "name": "@papillonbits/discovery-core-microsite",
-  "version": "1.0.0",
   "description": "Discovery Core Microsite",
-  "homepage": "https://github.com/papillonbits/discovery/tree/master/packages/core",
+  "homepage": "https://github.com/papillonbits/discovery/tree/master/packages/core#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/papillonbits/discovery.git",
@@ -15,10 +14,6 @@
   "keywords": [
     "discovery core microsite"
   ],
-  "author": {
-    "name": "MTS",
-    "url": "https://github.com/mts"
-  },
   "scripts": {
     "clean-up": "rm -rf build node_modules package-lock.json",
     "install-packages": "npm install",

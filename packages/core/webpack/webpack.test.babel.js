@@ -1,7 +1,7 @@
-import { getWebpackProductionSetup } from '@papillonbits/library/webpack'
+import { getWebpackProductionSetup } from '@papillonbits/setup/webpack'
 import { environmentVariablesFilePaths, micrositeFolderPaths, micrositeUrlPaths } from './webpack.constant'
 import { webpackCommonSetup } from './webpack.common'
-import packageJSON from '../package.json'
+import packageJSON from '../../../package.json'
 
 export default getWebpackProductionSetup({
   webpackCommonSetup,

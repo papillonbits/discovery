@@ -1,4 +1,4 @@
-import { getWebpackDevelopmentSetup } from '@papillonbits/library/webpack'
+import { getWebpackDevelopmentSetup } from '@papillonbits/setup/webpack'
 import { environmentVariablesFilePaths, micrositeFolderPaths, micrositeUrlPaths, includedSourceFilePaths } from './webpack.constant'
 import { webpackCommonSetup } from './webpack.common'
 

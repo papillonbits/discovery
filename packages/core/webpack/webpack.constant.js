@@ -1,4 +1,5 @@
 import path from 'path'
+import packageJSON from '../../../package.json'
 
 export const environmentVariablesFilePaths = {
   development: path.resolve(__dirname, '../.env.develop'),
@@ -9,9 +10,9 @@ export const environmentVariablesFilePaths = {
 
 export const micrositeUrlPaths = {
   development: '/',
-  test: '/discovery/',
-  acceptance: '/discovery/',
-  release: '/discovery/',
+  test: `/${packageJSON.name}/`,
+  acceptance: `/${packageJSON.name}/`,
+  release: `/${packageJSON.name}/`,
 }
 
 export const micrositeFolderPaths = {
