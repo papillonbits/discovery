@@ -5,7 +5,7 @@ jest.mock('redux', () => ({
   combineReducers: jest.fn(),
 }))
 jest.mock('redux-logger', () => ({ createLogger: jest.fn() }))
-jest.mock('redux-thunk', () => ({ applyMiddleware: jest.fn(), compose: jest.fn() }))
+jest.mock('redux-thunk', () => ({ thunk: { someThunk: 'fantastic-thunk' }, withExtraArgument: jest.fn() }))
 
 jest.mock('@papillonbits/library/array', () => {
   const items = [

@@ -2,7 +2,7 @@ import { Store } from '../base'
 
 jest.mock('redux', () => ({ applyMiddleware: jest.fn(), compose: jest.fn() }))
 jest.mock('redux-logger', () => ({ createLogger: jest.fn() }))
-jest.mock('redux-thunk', () => ({ applyMiddleware: jest.fn(), compose: jest.fn() }))
+jest.mock('redux-thunk', () => ({ thunk: { someThunk: 'fantastic-thunk' }, withExtraArgument: jest.fn() }))
 jest.mock('../../library/environment/host', () => ({
   isRunningOnLocalHost: true,
 }))
@@ -30,7 +30,7 @@ describe('index', () => {
       const store = new Store()
 
       expect(reduxLoggerMockObject.createLogger).toHaveBeenCalledTimes(1)
-      expect(store.middlewares).toMatchObject([reduxThunkMockObject, createLoggerMockObject])
+      expect(store.middlewares).toMatchObject([reduxThunkMockObject.thunk, createLoggerMockObject])
     })
 
     test('must only have thunk middleware when not running on localhost', () => {
@@ -39,7 +39,7 @@ describe('index', () => {
       const store = new Store()
 
       expect(reduxLoggerMockObject.createLogger).not.toHaveBeenCalled()
-      expect(store.middlewares).toMatchObject([reduxThunkMockObject])
+      expect(store.middlewares).toMatchObject([reduxThunkMockObject.thunk])
     })
   })
 })
