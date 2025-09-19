@@ -1,25 +1,8 @@
-import { MemoryRouter } from 'react-router-dom'
-import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks'
+import { getStorybookPreviewSetup } from '@papillonbits/setup/storybook/previewSetup'
 
-export const parameters = {
-  a11y: {
-    // optional selector which element to inspect
-    // element: '#root',
-    // axe-core configurationOptions (https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#parameters-1)
-    config: {},
-    // axe-core optionsParameter (https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#options-parameter)
-    options: {},
-    // optional flag to prevent the automatic check
-    // manual: true,
-  },
-  decorators: [
-    (Story) => (
-      <MemoryRouter>
-        <Story />
-      </MemoryRouter>
-    ),
-  ],
-  docs: { container: DocsContainer, page: DocsPage },
-}
+const storybookPreviewSetup = getStorybookPreviewSetup({ parameters: { a11y: true, decorators: true, docs: true } })
+
+export const parameters = storybookPreviewSetup.parameters
+export const tags = ['autodocs']
 
 localStorage.clear()

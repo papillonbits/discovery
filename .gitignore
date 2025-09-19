@@ -7,6 +7,7 @@ app.sublime-workspace
 
 # Storybook
 .storybook-static
+debug-storybook.log
 
 # Discovery
 .coverage
