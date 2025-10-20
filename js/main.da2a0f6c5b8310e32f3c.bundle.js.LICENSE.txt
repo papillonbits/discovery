@@ -6,9 +6,9 @@
 
 /*!
  * @project        discovery
- * @name           main.003231d8056649c76453.bundle.js
+ * @name           main.da2a0f6c5b8310e32f3c.bundle.js
  * @author         MTS
- * @copyright      Copyright (c) 2024 MTS
+ * @copyright      Copyright (c) 2025 MTS
  */
 
 /**
@@ -53,38 +53,16 @@
 
 /**
  * @license React
- * use-sync-external-store-with-selector.production.min.js
+ * use-sync-external-store-with-selector.production.js
  *
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
 
 /**
- * @remix-run/router v1.14.1
- *
- * Copyright (c) Remix Software Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.md file in the root directory of this source tree.
- *
- * @license MIT
- */
-
-/**
- * React Router DOM v6.21.1
- *
- * Copyright (c) Remix Software Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.md file in the root directory of this source tree.
- *
- * @license MIT
- */
-
-/**
- * React Router v6.21.1
+ * react-router v7.9.4
  *
  * Copyright (c) Remix Software Inc.
  *

@@ -1,6 +1,0 @@
-/*!
- * @project        discovery
- * @name           runtime.4f8230c0412844cb7538.bundle.js
- * @author         MTS
- * @copyright      Copyright (c) 2024 MTS
- */
